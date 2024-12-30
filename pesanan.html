@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesanan</title>
+</head>
+<body>
+
+  <h1>Pesanan</h1>
+
+  <form action="/order" method="get">
+    <label for="">Baju</label>
+    <div>
+      <input type="radio" name="baju" value="kemeja" checked /><label for="">Kemeja</label>
+      <input type="radio" name="baju" value="kaos" /><label for="">Kaos</label>
+    </div>
+
+    <div>
+      <label for="ukuran">Ukuran</label>
+      <select name="ukuran" id="ukuran">
+        <option value="empty">-</option>
+        <option value="small">S</option>
+        <option value="medium">M</option>
+        <option value="large">L</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="term">Sudah sesuai pesanan</label>
+      <input type="checkbox" name="term" id="term" value="setuju" />
+    </div>
+
+    <div>
+      <label for="note">Catatan:</label><br />
+      <textarea name="note" id="note" cols="30" rows="10"></textarea>
+    </div>
+    
+    <button type="submit">Order</button>
+  </form>
+
+  <hr />
+
+  <h2>Validasi</h2>
+  <form action="valid">
+    <input type="text" name="validasi" required minlength="3" maxlength="7" />
+    <input type="date" name="tanggal" id="tanggal" required />
+    <button>kirim</button>
+  </form>
+  
+</body>
+</html>
